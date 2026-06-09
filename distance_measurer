@@ -1,0 +1,9 @@
+from math import sqrt
+
+def measure_distance(primary_vector, reconstructed_vector):
+    # I require that the vectors have the same number of elements, won't worry about checking
+    under_radical = 0
+    for i in range(len(primary_vector)):
+        under_radical += (primary_vector[i] - reconstructed_vector[i])**2
+
+    return sqrt(under_radical)
